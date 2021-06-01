@@ -10,14 +10,44 @@ var block = document.getElementById("block");
 var erika = document.getElementById("erika");
 var counter=0;
 var score = 0;
-//Jump + Animation
-function jump(){
-    if(character.classList == "animate"){return}
-    character.classList.add("animate");
-    setTimeout(function(){
+//Controlls
+window.onkeydown = function(e){
+    //Jump
+    if (e.shiftKey) {
+        /*shift is down*/
+        if(character.classList == "animate"){return}
+        character.classList.add("animate");
+        setTimeout(function(){
         character.classList.remove("animate");
-    },300);
+        },300);
+        
+    }
+    //Sneak
+    if (e.ctrlKey) {
+        /*ctrl is down*/
+        document.getElementById("character").style.height="20px";
+        document.getElementById("character").style.top="150px";
+        document.getElementById("character").src="Sprites/sneak.gif";
+        document.getElementById("block").style.top="80px";
+        setTimeout(function(){
+            document.getElementById("character").style.height="40px";
+            document.getElementById("character").style.top="130px";
+        document.getElementById("block").style.top="60px";
+        document.getElementById("character").src="Sprites/player.gif";
+            },600);
+    }
 }
+//function jump(event)
+//{
+//        if(character.classList == "animate"){return}
+//        character.classList.add("animate");
+//        setTimeout(function(){
+//        character.classList.remove("animate");
+//        },300);
+//}
+
+    
+
 
 //Score
 if(counter > 10){
@@ -62,7 +92,6 @@ var checkDead = setInterval(function() {
         //document.getElementById("scoreSpan").innerHTML = Math.floor(counter/100);
     }
 }, 10);
-
 
   
 
