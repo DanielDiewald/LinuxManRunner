@@ -46,7 +46,7 @@ var checkDead = setInterval(function() {
     let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
     if(blockLeft<20 && blockLeft>-20 && characterTop>=130){
         block.style.animation = "none";
-        //location.href = "gameover.html";
+        location.href = "gameover.html";
         //alert("Game Over! score: "+Math.floor(counter/100));
         //highscore
         
