@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+.scroeSpan {
+    z-index:1;
+    color: white;
+}
+.bb{
+  
+  background-color: black;
+}
+.game{
+    width: 500px;
+    height: 200px;
+    margin: auto;
+}
+.top-left {
+  color: white;
+  position: absolute;
+  top: 0px;
+  left: auto;
+  
+}
+#bar {
+  width: 20;
+  height: 200px;
+  background:  0px 0px url('Data/sprites/background.png') repeat-x;
+  -webkit-animation: scroll 20s linear infinite;
+  animation: scroll 20s linear infinite;
+}
+#heidi {
+    width: 500px;
+    height: 200px;
+    background:  0px 0px url('Data/sprites/realtrain.png') repeat-x;
+    -webkit-animation: scroll 2s linear infinite;
+    animation: scroll 2s linear infinite;
+  }
+#franz{
+    width: 500px;
+    height: 200px;
+    background:  0px 0px url('Data/sprites/train.png') repeat-x;
+    -webkit-animation: scroll 19s linear infinite;
+    animation: scroll 19s linear infinite;
+  }
+ #fritz{
+    width: 500px;
+    height: 200px;
+    background:  0px 0px url('Data/sprites/backgroundbuildings.png') repeat-x;
+    -webkit-animation: scroll 13s linear infinite;
+    animation: scroll 13s linear infinite;
+  }
+  #heinrich{
+    width: 500px;
+    height: 200px;
+    background:  0px 0px url('Data/sprites/lamps.png') repeat-x;
+    -webkit-animation: scroll 6s linear infinite;
+    animation: scroll 6s linear infinite;
+  }
+#heinz{
+    width: 500px;
+    height: 200px;
+    margin: auto;
+    background: #000000 0px 0px url('Data/sprites/sky.png');
+}
+#character{
+    width: 20px;
+    height: 40px;
+    position:relative;
+    top: 130px;
+    left: 40px;
+    z-index:120;
+    border: 0px;
+    border-image: 0px;
+
+}
+.character{
+  margin-bottom: 70px;
+}
+.animate{
+    animation: jump 0.3s linear;
+}
+@keyframes jump{
+    0%{top: 130px;}
+    30%{top: 70px;}
+    70%{top: 70px;}
+    100%{top: 130px;}
+}
+
+#block{
+  background-color: black;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 60px;
+    left: 500px;
+    animation: block 1s infinite linear;
+    z-index:110
+}
+
+
+#erika{
+    width: 500px;
+  height: 200px;
+  background:  0px 0px url('Data/sprites/clouds.png');
+  -webkit-animation: scroll 40s linear infinite;
+  animation: scroll 40s linear infinite;
+}
+@keyframes block{
+    0%{left: 500px}
+    100%{left: -20px}
+}
+@-webkit-keyframes scroll {
+  from {background-position: 500px 0;}
+  to {background-position: 0 0;}
+}
+
+@keyframes scroll {
+  from {background-position: 500px 0;}
+  to {background-position: 0 0;}
+}
