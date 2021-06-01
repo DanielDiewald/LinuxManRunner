@@ -95,10 +95,7 @@ var intervalId = window.setInterval(function(){
 if (randomenemy < 1){
     block.style.animation = "none";
 }
-if(randomenemy > 5)
-{
-    block.style.top = "0px";
-}
+
 if(randomenemy > 4)
 {
     block.style.animation = "speedblock 1s infinite linear";
