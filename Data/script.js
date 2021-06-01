@@ -65,9 +65,12 @@ else{
 //checkDead
 
 var checkDead = setInterval(function() {
+    let characterBottom = parseInt(window.getComputedStyle(character).getPropertyValue("bottom"));
+    let blockBottom = parseInt(window.getComputedStyle(block).getPropertyValue("bottom"));
     let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
     if(blockLeft<20 && blockLeft>-20 && characterTop>=130){
+    
         //block.style.animation = "none";
         location.href = "gameover.html";
         //alert("Game Over! score: "+Math.floor(counter/100));
@@ -88,9 +91,13 @@ var checkDead = setInterval(function() {
 
 //random Enemy
 var intervalId = window.setInterval(function(){
-    let randomenemy = Math.floor(Math.random() * 6);
+    let randomenemy = Math.floor(Math.random() * 7);
 if (randomenemy < 1){
     block.style.animation = "none";
+}
+if(randomenemy > 5)
+{
+    block.style.top = "0px";
 }
 if(randomenemy > 4)
 {
