@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" onclick="jump()" onkeydown="jump()" >
+<head>
+    <meta charset="UTF-8">
+    <title>Start</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onLoad="checksavescore()" class="bb">
+<div id="alex" class="alex">
+    <div style="margin: auto;">
+        <div id="heinz">
+            <div id="erika">
+                <div id="bar" class="game">
+                    <div id="heidi">
+                        <div id="franz">
+                            <div id="fritz">
+                                <div id="heinrich">
+                                    <img  id="myButton" class="foreground" src="sprites/foregroundstart.png" style="position:absolute; top:20; left:200; z-index:200">
+                                    <div class="top-left" style="background-color: black; background: rgba(0, 0, 0, 0.3); margin-left: 5px; ">
+                                        <p>your Highscore: <span id="highscore">0</span></p>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                
+                
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+</div>
+    
+</body>
+<script>
+    function checksavescore(){
+    document.getElementById("highscore").innerHTML = localStorage.getItem("yourscore");
+}
+document.getElementById("myButton").onclick = function () {
+        location.href = "game.html";
+    };
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</html>

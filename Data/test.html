@@ -1,0 +1,63 @@
+<html>
+   <head>
+      <style>
+        #padre{
+   overflow-x: visible;
+  white-space: nowrap;
+      
+  }
+
+
+#hijo{
+  left: 0;
+    position: fixed;
+    overflow: visible;
+    -moz-transform-origin: top left;
+    -ms-transform-origin: top left;
+    -o-transform-origin: top left;
+    -webkit-transform-origin: top left;
+     transform-origin: top left;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+     transition: all .2s ease-in-out;
+}
+      </style>
+   </head>
+
+   <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <div id="padre">
+           <div id="hijo">
+             THIS CONTENT HAS TO FIT HORIZONTALLY ON SCREEN, THIS CONTENT CAN'T WRAP NOR SCROLL BLA BLA BLA BLA BLA BLA BLA
+           </div>
+      </div>
+    <FORM> 
+      <INPUT type="button" value="Start" name="button3" onClick="game();">
+      <INPUT type="button" value="Check cookie" name="button3" onClick="checkCookie();">
+  </FORM>
+  <td><textarea id="myTextarea">Your high score goes here</textarea></td>
+  <body onload="checkCookie()">
+   </body>
+   <script>
+     $(document).ready(function(){
+
+
+var width = document.getElementById('hijo').offsetWidth;
+            var height = document.getElementById('hijo').offsetHeight;
+            var windowWidth = $(document).outerWidth();
+            var windowHeight = $(document).outerHeight();
+            var r = 1;
+            r = Math.min(windowWidth / width, windowHeight / height)
+
+            $('#hijo').css({
+                '-webkit-transform': 'scale(' + r + ')',
+                '-moz-transform': 'scale(' + r + ')',
+                '-ms-transform': 'scale(' + r + ')',
+                '-o-transform': 'scale(' + r + ')',
+                'transform': 'scale(' + r + ')'
+            });
+
+});
+   </script>
+</html>
