@@ -86,6 +86,13 @@ var checkDead = setInterval(function() {
             document.getElementById("highscore").innerHTML = (counter);
         }
         counter=-1;
+        let randomenemy = Math.floor(Math.random() * 2);
+        if (randomenemy == 1){
+            block.style.top = "40px";
+        }
+        else{
+           
+        }
         block.style.animation = "block 1s infinite linear";
     }else{
         //counter++;
