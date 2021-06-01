@@ -28,13 +28,13 @@ window.onkeydown = function(e){
         /*ctrl is down*/
         document.getElementById("character").style.height="20px";
         document.getElementById("character").style.top="150px";
-        document.getElementById("character").src="Sprites/sneak.gif";
+        document.getElementById("character").src="SPRITES/sneak.gif";
         document.getElementById("block").style.top="80px";
         setTimeout(function(){
             document.getElementById("character").style.height="40px";
             document.getElementById("character").style.top="130px";
         document.getElementById("block").style.top="60px";
-        document.getElementById("character").src="Sprites/player.gif";
+        document.getElementById("character").src="SPRITES/player.gif";
             },600);
     }
 }

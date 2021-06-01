@@ -26,35 +26,35 @@
 #bar {
   width: 20;
   height: 200px;
-  background:  0px 0px url('sprites/background.png') repeat-x;
+  background:  0px 0px url('SPRITES/background.png') repeat-x;
   -webkit-animation: scroll 20s linear infinite;
   animation: scroll 20s linear infinite;
 }
 #heidi {
     width: 500px;
     height: 200px;
-    background:  0px 0px url('sprites/realtrain.png') repeat-x;
+    background:  0px 0px url('SPRITES/realtrain.png') repeat-x;
     -webkit-animation: scroll 2s linear infinite;
     animation: scroll 2s linear infinite;
   }
 #franz{
     width: 500px;
     height: 200px;
-    background:  0px 0px url('sprites/train.png') repeat-x;
+    background:  0px 0px url('SPRITES/train.png') repeat-x;
     -webkit-animation: scroll 19s linear infinite;
     animation: scroll 19s linear infinite;
   }
  #fritz{
     width: 500px;
     height: 200px;
-    background:  0px 0px url('sprites/backgroundbuildings.png') repeat-x;
+    background:  0px 0px url('SPRITES/backgroundbuildings.png') repeat-x;
     -webkit-animation: scroll 13s linear infinite;
     animation: scroll 13s linear infinite;
   }
   #heinrich{
     width: 500px;
     height: 200px;
-    background:  0px 0px url('sprites/lamps.png') repeat-x;
+    background:  0px 0px url('SPRITES/lamps.png') repeat-x;
     -webkit-animation: scroll 6s linear infinite;
     animation: scroll 6s linear infinite;
   }
@@ -62,7 +62,7 @@
     width: 500px;
     height: 200px;
     margin: auto;
-    background: #000000 0px 0px url('sprites/sky.png');
+    background: #000000 0px 0px url('SPRITES/sky.png');
 }
 #character{
     width: 20px;
@@ -101,7 +101,7 @@
 #erika{
     width: 500px;
   height: 200px;
-  background:  0px 0px url('sprites/clouds.png');
+  background:  0px 0px url('SPRITES/clouds.png');
   -webkit-animation: scroll 40s linear infinite;
   animation: scroll 40s linear infinite;
 }
