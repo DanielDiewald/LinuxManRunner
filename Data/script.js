@@ -10,6 +10,7 @@ var block = document.getElementById("block");
 var erika = document.getElementById("erika");
 var counter=0;
 var score = 0;
+
 //Controlls
 window.onkeydown = function(e){
     //Jump
@@ -37,14 +38,6 @@ window.onkeydown = function(e){
             },600);
     }
 }
-//function jump(event)
-//{
-//        if(character.classList == "animate"){return}
-//        character.classList.add("animate");
-//        setTimeout(function(){
-//        character.classList.remove("animate");
-//        },300);
-//}
 
     
 
@@ -69,13 +62,13 @@ else{
 
 
 
-
 //checkDead
+
 var checkDead = setInterval(function() {
     let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
     if(blockLeft<20 && blockLeft>-20 && characterTop>=130){
-        block.style.animation = "none";
+        //block.style.animation = "none";
         location.href = "gameover.html";
         //alert("Game Over! score: "+Math.floor(counter/100));
         //highscore
@@ -86,19 +79,27 @@ var checkDead = setInterval(function() {
             document.getElementById("highscore").innerHTML = (counter);
         }
         counter=-1;
-        let randomenemy = Math.floor(Math.random() * 2);
-        if (randomenemy == 1){
-            block.style.top = "40px";
-        }
-        else{
-           
-        }
-        block.style.animation = "block 1s infinite linear";
+        
     }else{
-        //counter++;
-        //document.getElementById("scoreSpan").innerHTML = Math.floor(counter/100);
+        
+       
     }
 }, 10);
+
+//random Enemy
+var intervalId = window.setInterval(function(){
+    let randomenemy = Math.floor(Math.random() * 6);
+if (randomenemy < 1){
+    block.style.animation = "none";
+}
+if(randomenemy > 4)
+{
+    block.style.animation = "speedblock 1s infinite linear";
+}
+else{
+    block.style.animation = "block 1s infinite linear";
+}
+  }, 1000);
 
   
 

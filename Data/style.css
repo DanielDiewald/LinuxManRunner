@@ -95,11 +95,9 @@
     position: relative;
     top: 60px;
     left: 500px;
-    animation: block 1s infinite linear;
+    animation: none;
     z-index:110
 }
-
-
 #erika{
     width: 500px;
   height: 200px;
@@ -110,6 +108,10 @@
 @keyframes block{
     0%{left: 500px}
     100%{left: -20px}
+}
+@keyframes speedblock{
+  0%{left: 500px}
+  100%{left: -200px}
 }
 @-webkit-keyframes scroll {
   from {background-position: 500px 0;}
