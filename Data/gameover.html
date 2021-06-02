@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" onclick="jump()" onkeydown="jump()" >
+<html lang="en" onclick="jump()" onkeydown="press()" >
 <head>
     <meta charset="UTF-8">
     <title>Start</title>
@@ -41,10 +41,14 @@
     function checksavescore(){
     document.getElementById("highscore").innerHTML = localStorage.getItem("yourscore");
 }
+function press(){
+    location.href = "game.html";
+}
 document.getElementById("myButton").onclick = function () {
         location.href = "game.html";
     };
     document.getElementById("lastscore").innerHTML = localStorage.getItem("lastscore");
+
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="size.js"></script>
