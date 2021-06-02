@@ -105,6 +105,15 @@ else{
 }
   }, 1000);
 
+//Jump + Animation
+function jump(){
+    if(character.classList == "animate"){return}
+    character.classList.add("animate");
+    setTimeout(function(){
+        character.classList.remove("animate");
+    },300);
+}
+
   
 
 
