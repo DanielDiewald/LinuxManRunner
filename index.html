@@ -5,38 +5,110 @@
     <title>Start</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body onLoad="checksavescore()" class="bb">
-    <div id="alex" class="alex">
-      <div style="margin: auto">
-        <div id="heinz">
-          <div id="erika">
-            <div id="bar" class="game">
-              <div id="heidi">
-                <div id="franz">
-                  <div id="fritz">
-                    <div id="heinrich">
-                      <img
-                        id="myButton"
-                        class="foreground"
-                        src="Data/SPRITES/foregroundstart.png"
-                        style="
-                          position: absolute;
-                          top: 0;
-                          left: 0;
-                          width: 500px;
-                          height: 200px;
-                          z-index: 200;
-                          cursor: pointer;
-                        "
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <body onLoad="checksavescore()" style="background-color: black; margin: 0">
+    <div
+      id="alex"
+      class="alex"
+      style="
+        width: 500px;
+        height: 200px;
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+      "
+    >
+      <img
+        src="Data/SPRITES/sky.png"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 500px;
+          height: 200px;
+          z-index: 1;
+        "
+      />
+      <img
+        src="Data/SPRITES/clouds.png"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 500px;
+          height: 200px;
+          z-index: 2;
+        "
+      />
+      <img
+        src="Data/SPRITES/background.png"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 500px;
+          height: 200px;
+          z-index: 3;
+        "
+      />
+      <img
+        src="Data/SPRITES/backgroundbuildings.png"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 500px;
+          height: 200px;
+          z-index: 4;
+        "
+      />
+      <img
+        src="Data/SPRITES/train.png"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 500px;
+          height: 200px;
+          z-index: 5;
+        "
+      />
+      <img
+        src="Data/SPRITES/lamps.png"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 500px;
+          height: 200px;
+          z-index: 6;
+        "
+      />
+      <img
+        src="Data/SPRITES/realtrain.png"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 500px;
+          height: 200px;
+          z-index: 7;
+        "
+      />
+      <img
+        id="myButton"
+        src="Data/SPRITES/foregroundstart.png"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 500px;
+          height: 200px;
+          z-index: 200;
+          cursor: pointer;
+        "
+      />
     </div>
   </body>
   <script>

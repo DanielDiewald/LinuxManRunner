@@ -5,50 +5,127 @@
     <title>Start</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body onLoad="checksavescore()" class="bb">
-    <div id="alex" class="alex">
-      <div style="margin: auto">
-        <div id="heinz">
-          <div id="erika">
-            <div id="bar" class="game">
-              <div id="heidi">
-                <div id="franz">
-                  <div id="fritz">
-                    <div id="heinrich">
-                      <img
-                        id="myButton"
-                        class="foreground"
-                        src="SPRITES/foregroundgameover.png"
-                        style="
-                          position: absolute;
-                          top: 0;
-                          left: 0;
-                          width: 500px;
-                          height: 200px;
-                          z-index: 200;
-                          cursor: pointer;
-                        "
-                      />
-                      <div
-                        class="top-left"
-                        style="
-                          background-color: black;
-                          background: rgba(0, 0, 0, 0.3);
-                          margin-left: 5px;
-                        "
-                      >
-                        <p>
-                          Score: <span id="lastscore"> </span> Highscore:
-                          <span id="highscore">0</span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <body onLoad="checksavescore()" style="background-color: black; margin: 0">
+    <div
+      id="alex"
+      class="alex"
+      style="
+        width: 500px;
+        height: 200px;
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+      "
+    >
+      <img
+        src="SPRITES/sky.png"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 500px;
+          height: 200px;
+          z-index: 1;
+        "
+      />
+      <img
+        src="SPRITES/clouds.png"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 500px;
+          height: 200px;
+          z-index: 2;
+        "
+      />
+      <img
+        src="SPRITES/background.png"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 500px;
+          height: 200px;
+          z-index: 3;
+        "
+      />
+      <img
+        src="SPRITES/backgroundbuildings.png"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 500px;
+          height: 200px;
+          z-index: 4;
+        "
+      />
+      <img
+        src="SPRITES/train.png"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 500px;
+          height: 200px;
+          z-index: 5;
+        "
+      />
+      <img
+        src="SPRITES/lamps.png"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 500px;
+          height: 200px;
+          z-index: 6;
+        "
+      />
+      <img
+        src="SPRITES/realtrain.png"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 500px;
+          height: 200px;
+          z-index: 7;
+        "
+      />
+      <img
+        id="myButton"
+        src="SPRITES/foregroundgameover.png"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 500px;
+          height: 200px;
+          z-index: 200;
+          cursor: pointer;
+        "
+      />
+
+      <div
+        class="top-left"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: black;
+          background: rgba(0, 0, 0, 0.3);
+          margin-left: 5px;
+          z-index: 300;
+        "
+      >
+        <p style="margin: 0; padding: 2px">
+          Score: <span id="lastscore"> </span> Highscore:
+          <span id="highscore">0</span>
+        </p>
       </div>
     </div>
   </body>
