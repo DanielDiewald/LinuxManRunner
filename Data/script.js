@@ -120,10 +120,12 @@ function spawnEnemy() {
   let randomenemy = Math.floor(Math.random() * 7);
   if (randomenemy < 1) return; // 'none' animation equivalent
 
-  let isSpeedBlock = randomenemy > 4;
+  let isSpeedBlock = randomenemy === 4 || randomenemy === 5;
+  let isFlying = randomenemy === 6 || randomenemy === 3; // Some flying blocks
+
   enemies.push({
     x: GAME_WIDTH,
-    y: 150, // always on the ground (170 - 20)
+    y: isFlying ? 130 : 150, // 120 for flying blocks (duck under), 150 for ground
     width: 20,
     height: 20,
     speed: isSpeedBlock ? 5 : 3,
