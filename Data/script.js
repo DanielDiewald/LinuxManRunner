@@ -144,9 +144,11 @@ function update(deltaTime) {
 
   // Background parallax
   for (let layer of bgLayers) {
+    let img = images[layer.img];
+    let layerWidth = img.width || GAME_WIDTH; // Default to GAME_WIDTH if not loaded
     layer.x -= layer.speed * (deltaTime / 16);
-    if (layer.x <= -GAME_WIDTH) {
-      layer.x = 0;
+    if (layer.x <= -layerWidth) {
+      layer.x += layerWidth;
     }
   }
 
@@ -202,14 +204,20 @@ function draw() {
   // Draw backgrounds
   for (let layer of bgLayers) {
     let img = images[layer.img];
-    ctx.drawImage(img, Math.floor(layer.x), 0, GAME_WIDTH, GAME_HEIGHT);
-    ctx.drawImage(
-      img,
-      Math.floor(layer.x) + GAME_WIDTH,
-      0,
-      GAME_WIDTH,
-      GAME_HEIGHT,
-    );
+
+    // Draw the image at its natural width continuously
+    let layerWidth = img.width || GAME_WIDTH;
+    let repetitions = Math.ceil(GAME_WIDTH / layerWidth) + 1;
+
+    for (let i = 0; i < repetitions; i++) {
+      ctx.drawImage(
+        img,
+        Math.floor(layer.x) + i * layerWidth,
+        0,
+        layerWidth,
+        GAME_HEIGHT,
+      );
+    }
   }
 
   // Draw Player
