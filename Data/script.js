@@ -63,29 +63,29 @@ let enemySpawnTimer = 0;
 
 const player = {
   x: 40,
-  y: 130, // Restoring to 130 
+  y: 130, // Restoring to 130
   width: 20,
   height: 40,
   velocityY: 0,
-  gravity: 0.5,
+  gravity: 0.25,
   isJumping: false,
   isSneaking: false,
-  jumpPower: -8,
+  jumpPower: -6,
 };
 
 const enemies = [];
 
 // Input
 window.onkeydown = function (e) {
-  if (e.shiftKey) {
+  if (e.code === "Space" || e.code === "ArrowUp" || e.code === "KeyW") {
     jump();
   }
-  if (e.ctrlKey) {
+  if (e.code === "ArrowDown" || e.code === "KeyS") {
     sneak(true);
   }
 };
 window.onkeyup = function (e) {
-  if (e.key === "Control") {
+  if (e.code === "ArrowDown" || e.code === "KeyS") {
     sneak(false);
   }
 };
@@ -123,7 +123,7 @@ function spawnEnemy() {
   let isSpeedBlock = randomenemy > 4;
   enemies.push({
     x: GAME_WIDTH,
-    y: player.isSneaking ? 80 : 150, // 150 for regular height blocks to match bottom
+    y: 150, // always on the ground (170 - 20)
     width: 20,
     height: 20,
     speed: isSpeedBlock ? 5 : 3,
